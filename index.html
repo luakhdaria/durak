@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курсы по игре "Дурак Онлайн"</title>
+    <script>
+        // Function to handle selection of tours
+        function selectTour(tourName) {
+            const selectedTours = document.getElementById('selected-tours');
+            const existingSelection = selectedTours.value;
+            if (existingSelection) {
+                selectedTours.value += `, ${tourName}`;
+            } else {
+                selectedTours.value = tourName;
+            }
+        }
+
+        // Function to submit the form
+        function submitForm() {
+            const form = document.getElementById('tour-form');
+            const selectedTours = document.getElementById('selected-tours').value;
+            form.action = `https://www.google.ru/?hl=ru&selected=${encodeURIComponent(selectedTours)}`;
+            form.submit();
+        }
+    </script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="https://sun9-22.userapi.com/impg/-N2sPV4fc9hhnQOzFlFn590MZSg440e4BfamXQ/cgOoIz4E0GQ.jpg?size=284x286&quality=96&sign=9375de67cb34cadcabcb357040ddad58&type=album" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header text-center">
+        <div class="overlay">
+            <h1 id="up" class="header-title">Дурак Онлайн</h1>
+        </div>
+    </header>
+
+    <header class="second-header text-center"> 
+        <div class="second-overlay">
+            <h1 class="second-header-title">Каждый знает, как играть, но не каждый - как выигрывать</h1>
+        </div>
+    </header>
+
+    <header class="navigation"> 
+        <nav> 
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="index.html#header"><u>Главная</u></a></li>
+                <li class="nav-item"><a class="nav-link" href="index2.html">О курсе</a></li>
+                <li class="nav-item"><a class="nav-link" href="index3.html">Тест на дурака</a></li>
+                <li class="nav-item"><a class="nav-link" href="index4.html">Записаться на курс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="page-navigation text-center">
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#hystory">История игры</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mobile"><img height="20px" src="samdurakmem.jpg"></a></li>
+                <li class="nav-item"><a class="nav-link" href="#cooperation">Сотрудничество</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content container mt-4">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-image" src="https://otvet.imgsmail.ru/download/279065783_27a28726cf7fa81477484d1bccef6b8c_800.jpg" alt="хихи"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Развлечение</h3>
+                        <p class="card-text">Игра в «дурака» — отличный способ развлечься, она позволяет расслабиться и отвлечься от повседневных забот.</p>
+                    </div>
+                    <input type='number' id='num_to_cart' class= 'form-control'>
+                    <button type='button' class='btn btn-success' onclick='selectTour("Развлечение")'>Выбрать</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-image" src="https://i.pinimg.com/564x/97/2f/0b/972f0b7743721c0532e9e553d630e884.jpg" alt="хихихи"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Социальная активность</h3>
+                        <p class="card-text">Вы можете играть вместе с друзьями и обмениваться шутками во время игры.</p>
+                    </div>
+                    <input type='number' id='num_to_cart' class= 'form-control'>
+                    <button type='button' class='btn btn-success' onclick='selectTour("Социальная активность")'>Выбрать</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-image" src="https://tlgrm.ru/_/stickers/7ea/61b/7ea61b31-6c49-452c-9b0b-7daed83fa3c8/5.jpg"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Поддержание традиций</h3>
+                        <p class="card-text">Для многих игра в «дурака» является частью культурной традиции, передающейся из поколения в поколение.</p>
+                    </div>
+                    <input type='number' id='num_to_cart' class= 'form-control'>
+                    <button type='button' class='btn btn-success' onclick='selectTour("Традиции")'>Выбрать</button>
+                    
+                </div>
+            </div>
+        
+
+            <!-- Card 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-image" src="https://media.stickerswiki.app/top_emoji_durak/41754.512.webp"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Психологическая разгрузка</h3>
+                        <p class="card-text">Процесс игры позволяет отвлечься от ежедневных забот и стрессов, что способствует улучшению настроения и общего самочувствия.</p>
+                    </div>
+                    <input type='number' id='num_to_cart' class= 'form-control'>
+                    <button type='button' class='btn btn-success' onclick='selectTour("Разгрузка")'>Выбрать</button>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-image" src="./drug.jpeg" />
+                    <div class="card-body">
+                        <h3 class="card-title">Почувствовать себя круче друзей</h3>
+                        <p class="card-text">Вы всегда можете насладиться победой над своим дружищем</p>
+                    </div>
+                    <input type='number' id='num_to_cart' class='form-control'>
+                    <button type='button' class='btn btn-success' onclick='selectTour("Почувствовать себя круче друзей")'>Выбрать</button>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-image" src="./tsveti.webp" />
+                    <div class="card-body">
+                        <h3 class="card-title">Подарить цветы</h3>
+                        <p class="card-text">Если нет денег - подарить цветы можно играя в дурак онлайн</p>
+                    </div>
+                    <input type='number' id='groupnumber' class='form-control'>
+                    <button type='button' class='btn btn-success' onclick='selectTour("Подарить цветы")'>Выбрать</button>
+                </div>
+            </div>
+            <button type='button' onclick='submitForm()' class='btn btn-primary mt-3'>Заказать</button>
+            
+            <script>
+                const selectedItems = [];
+            
+                // Обработчик для кнопок "Выбрать"
+                function selectTour(title) {
+                    const card = event.target.closest('.card');
+                    const quantityInput = card.querySelector('input[type="number"]');
+                    const quantity = quantityInput.value;
+            
+                    // Проверяем, добавлен ли товар
+                    if (!selectedItems.some(item => item.title === title)) {
+                        selectedItems.push({ title, quantity });
+                        alert(`Добавлено: ${title}`);
+                    } else {
+                        alert(`Уже добавлено: ${title}`);
+                    }
+                }
+            
+                // Функция для отправки формы
+                function submitForm() {
+                    if (selectedItems.length === 0) {
+                        alert("Вы не выбрали ни один товар.");
+                        return;
+                    }
+            
+                    // Подготавливаем информацию о выбранных товарах (только названия)
+                    const query = selectedItems.map(item => item.title).join(', ');
+            
+                    // Открываем новую вкладку с поиском на Bing
+                    const bingSearchUrl = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+                    window.open(bingSearchUrl, '_blank');
+                }
+            </script>
+            
+            <script crossorigin='anonymous'
+                integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3'
+                src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'></script>
+
+        <!-- History Section -->
+        <section id='hystory' style='margin-top: 20px;'>
+           <div class='page-frame'>
+               <h3>История игры в дурачка</h3>
+               <p>Игра в дурака прошла длительный путь от традиционной настольной игры до популярной онлайн-версии. С развитием технологий и интернета, «дурак» адаптировался и продолжает привлекать игроков, сохраняя свою популярность и сегодня.</p>
+               <img src='https://maffia-online.ru/images/role-image/durak.jpg' alt='История игры' style='width:100%; height:auto;'>
+           </div>
+
+           <!-- Mobile App Section -->
+           <div class='page-frame'>
+               <h3>Мобильное приложение в разработке....</h3>
+               <img id='mobile' src='samdurakmem.jpg' alt='Мобильное приложение' style='width:100%; height:auto;'>
+           </div>
+
+        
+
+        </section>
+
+        <!-- Scroll to Top Link -->
+        <div style='text-align: center; margin-top: 20px;'> 
+          <h5><a href='#up'>Наверх</a></h5>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class='footer text-center'>
+      <h4 id='cooperation'>Дях х Дурак Онлайн</h4>
+      <h4>По вопросам сотрудничества: 
+          <a href='https://t.me/luarsiiee' target='_blank'>@luarsiiee</a></h4>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'></script>
+
+</body>
+</html>
